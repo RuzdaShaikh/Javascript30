@@ -1,0 +1,41 @@
+:root {
+    /* variables declared in the root element */
+    --spacing: 15px;
+    --color: #dd7733;
+    --blur: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+    background-color: white;
+}
+
+img {
+    max-width: 700px;
+    max-height: 500px;
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+}
