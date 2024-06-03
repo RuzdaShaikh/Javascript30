@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Type Ahead</title>
     <style>
-        input{
+        input {
             display: block;
             margin: 0 auto;
             font-size: 25px;
             padding: 8px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <input type="text">
+    <form action="" class="search-form">
+        <input type="text" class="search" placeholder="City or State">
+        <ul class="suggestions">
+            <li>Filter for a City</li>
+            <li>Filter for a State</li>
+        </ul>
+    </form>
 
     <script src="index.js"></script>
 </body>
