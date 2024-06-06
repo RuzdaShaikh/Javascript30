@@ -8,11 +8,15 @@ form {
 }
 
 input {
-    font-size: 25px;
-    padding: 8px;
+    font-size: 30px;
+    padding: 10px;
     text-align: center;
     width: 100%;
     border: none;
+    border-radius: 5px;
+}
+input:focus {
+    border-color: black;
 }
 
 .suggestions {
@@ -22,8 +26,14 @@ input {
 
 li {
     background-color: white;
-    border: black solid 1px;
-    padding: 4px;
-    margin: 2px;
-    width: 90%;
+    padding: 20px;
+    margin-left: -20px;
+    font-size: 20px;
+    box-shadow: 0px 0px 20px inset #bbbbbb;
+    border-radius: 5px;
+}
+
+span.population {
+    font-size: 13px;
+    color: grey;
 }
