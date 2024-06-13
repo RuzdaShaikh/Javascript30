@@ -33,6 +33,7 @@ function displayMatches() {
         `
     }).join('')
     suggestions.innerHTML = html
+
 }
 
 const searchInput = document.querySelector('.search')
@@ -42,3 +43,15 @@ searchInput.addEventListener('change', displayMatches)
 searchInput.addEventListener('keyup', displayMatches)
 
 console.log(cities)
+
+const body = document.getElementsByTagName('body')[0]
+
+function randomColor() {
+    const red = Math.floor( Math.random() * 255 )
+    const blue = Math.floor( Math.random() * 255 )
+    const green = Math.floor( Math.random() * 255 )
+
+    const color = `rgb(${red}, ${blue}, ${green})`
+
+    body.style.backgroundColor = color
+}

@@ -6,14 +6,11 @@
     <title>Ajax Type Ahead</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body onload="randomColor()">
     <form>
-        <input type="text" class="search" placeholder="City or State">
+        <input type="text" class="search" placeholder="Search City or State">
         <div>
-            <ul class="suggestions">
-                <li>Filter for a City</li>
-                <li>Filter for a State</li>
-            </ul>
+            <ul class="suggestions"></ul>
         </div>
     </form>
 
