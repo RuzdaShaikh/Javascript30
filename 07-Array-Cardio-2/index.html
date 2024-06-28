@@ -40,6 +40,17 @@
                 })</pre>
             <button id="some-btn">console.log()</button>
             <p id="some"></p> <!--add class and change font to make it look like console-->
+
+            <p class="title">Array.prototype.every()</p>
+            <p>The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function.</p>
+            <p class="challenge">Check wether everyone is 19 or older.</p>
+            <pre>
+                const allAdult = people.every(function(person) {
+                    const currentYear = (new Date()).getFullYear()
+                    return currentYear - person.year >= 19
+                })</pre>
+            <button id="every-btn">console.log()</button>
+            <p id="every"></p>
         </div>
 </body>
 <script src="index.js"></script>

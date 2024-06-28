@@ -14,22 +14,41 @@ const comments = [
 ];
 
 // Array.prototype.some() // Is atleast 1 person 19?
+
+
+// const isAdult = people.some(function(person) {
+//     const currentYear = (new Date()).getFullYear()
+//     if(currentYear - person.year >= 19) {
+//         return true
+//     }
+// })
+
 const isAdult = people.some(function(person) {
     const currentYear = (new Date()).getFullYear()
-    if(currentYear - person.year >= 19) {
-        return true
-    }
+    return currentYear - person.year >= 19
 })
+
+// const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19)
 
 let someBtn = document.getElementById('some-btn')
 someBtn.addEventListener ('click', function() {
     document.getElementById('some').innerHTML += isAdult
 
+    console.log(isAdult)
 })
-console.log(isAdult)
 
 // Array.prototype.every() // is everyone 19 or older?
+const allAdult = people.every(function(person) {
+    const currentYear = (new Date()).getFullYear()
+    return currentYear - person.year >= 19
+})
 
+let everyBtn = document.getElementById('every-btn')
+everyBtn.addEventListener ('click', function() {
+    document.getElementById('every').innerHTML += allAdult
+
+    console.log(allAdult)
+})
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
 // find the comment with the ID of 823423
