@@ -28,9 +28,10 @@
                     { text: 'Nice Nice Nice!', id: 542328 }
                 ];</pre>
 
+            <!-- 1 -->
             <p class="title">Array.prototype.some()</p>
-            <p>A method that tests whether any one element in a collection satisfies a given condition.</p>
-            <p class="challenge">Check wether atleast 1 person is 19.</p>
+            <p class="text">A method that tests whether any one element in a collection satisfies a given condition.</p>
+            <p>Check wether atleast 1 person is 19.</p>
             <pre>
                 const isAdult = people.some(function(person) {
                     const currentYear = (new Date()).getFullYear()
@@ -39,18 +40,37 @@
                     }
                 })</pre>
             <button id="some-btn">console.log()</button>
-            <p id="some"></p> <!--add class and change font to make it look like console-->
-
+            
+            <!-- 2 -->
             <p class="title">Array.prototype.every()</p>
-            <p>The every() method of Array instances tests whether all elements in the array pass the test implemented by the provided function.</p>
-            <p class="challenge">Check wether everyone is 19 or older.</p>
+            <p class="text">The every() method tests whether all elements in the array pass the test implemented by the provided function.</p>
+            <p>Check wether everyone is 19 or older.</p>
             <pre>
                 const allAdult = people.every(function(person) {
                     const currentYear = (new Date()).getFullYear()
                     return currentYear - person.year >= 19
                 })</pre>
             <button id="every-btn">console.log()</button>
-            <p id="every"></p>
+            
+            <!-- 3 -->
+            <p class="title">Array.prototype.find()</p>
+            <p class="text">The find() method returns the first element in the provided array that satisfies the provided testing function.</p>
+            <p>find the comment with the ID of 823423.</p>
+            <pre>
+                const comment = comments.find(comment => comments.id === 823423)</pre>
+            <button id="find-btn">console.log()</button>
+
+            <!-- 4 -->
+            <p class="title">Array.prototype.findIndex()</p>
+            <p class="text">The findIndex() method returns the index (position) of the first element that passes a test.</p>
+            <p>find and delete the comment with ID of 823423.</p>
+            <pre>
+                const index = comments.findIndex(index => index.id === 823423)
+
+                comments.splice(index, 1)</pre>
+            <button id="findIdx-btn">console.log()</button>
+
+
         </div>
 </body>
 <script src="index.js"></script>
