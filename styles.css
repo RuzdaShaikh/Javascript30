@@ -26,30 +26,44 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-.project {
+
+.project {  
+    padding: 5px;
+    margin: 50px;
+}
+
+.linkbox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: solid 1px;
-    padding: 10px;
-    margin: 40px;
+    justify-content: center;  
+    padding: 5px;
+    margin: -5px;
     position: relative;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
 }
-.project:hover {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.436), 0 6px 20px 0 rgba(255, 255, 255, 0.436);
+.linkbox:hover {
+    box-shadow: 0 0 8px 1px #ebb4007a, 0 0 20px 2px #ebb400;
+    
 }
 
 .thumbnail {
     width: 350px;
     height: 200px;
     padding: 5px;
-    filter: grayscale(100%);
+    border-radius: 10px;
+    filter: grayscale(100%);  
+    transition: 0.4s ease-in-out; 
 }
+.linkbox:hover > .thumbnail {
+    filter: grayscale(0%);
+}
+
 a {
     text-decoration: none;
-    color: black;
 }
 
 span {
@@ -57,5 +71,10 @@ span {
     font-size: 2em;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.408);
+    border-radius: 5px;
     padding: 10px;
+    transition: 0.4s ease-in-out;
+}
+.linkbox:hover > span {
+    opacity: 0;
 }
